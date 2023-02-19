@@ -12,12 +12,12 @@ alias dot='/usr/bin/git --git-dit=$HOME/dotfiles/ --work-tree=$HOME'
 ```
 创建一个 alias 命令，方便以后进行管理，后面对配置文件进行 git 管理时用到的都是这个命令，而不是普通的 git 命令。
 
+**推荐把这条命令添加进 `.bashrc` 或 `.zshrc` 文件以持久生效。**
+
 ```bash
 dot config --local status.showUntrackedFiles no
 ```
 由于配置文件都是手动指定文件，这条命令可以使得查看仓库状态的时候不会因为其他文件没有添加或提交而显示不必要的状态信息。
-
-**推荐把这条命令添加进 `.bashrc` 或 `.zshrc` 文件以持久生效。**
 
 ### 2 管理 dotfiles
 
