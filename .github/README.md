@@ -1,3 +1,8 @@
+## Prerequisites
+
+- [Zap](https://github.com/zap-zsh/zap) - a minimal zsh plugin manager
+
+
 ## How to use
 
 ### Starting with git bare repo

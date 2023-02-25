@@ -1,3 +1,8 @@
+## 使用前准备
+
+- [Zap](https://github.com/zap-zsh/zap) - 轻量 zsh 插件管理器
+
+
 ## 用 git bare 管理 dotfiles
 
 ### 1 创建 bare repo
