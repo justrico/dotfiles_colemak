@@ -3,7 +3,7 @@ umask 022
 export EDITOR=nvim
 
 function pon() {
-    export http_proxy=http://172.24.224.1:7890
+    export http_proxy=http://172.24.64.1:7890
     export https_proxy=$http_proxy
     echo -e "终端代理已开启。"
 }

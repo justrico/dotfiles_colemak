@@ -40,6 +40,13 @@ alias alug="apt list --upgradable"
 # zypper
 alias zif="zypper if"
 alias zin="sudo zypper install"
+alias zs="zypper search"
+alias zsi="zypper se --installed-only"
 alias zrf="sudo zypper ref"
 alias zrm="sudo zypper rm"
+alias zru="sudo zypper rm -u"
+alias zun="sudo zypper pa --unneeded" # list unneeded packages
 alias zdup="sudo zypper dup"
+
+# wsl
+alias cdr="cd /mnt/e/PersonalFiles/Learning/learnRust"
