@@ -37,7 +37,7 @@ alias aug="sudo apt upgrade"
 alias alug="apt list --upgradable"
 # alias bat="batcat" # Uncomment this on Ubuntu
 
-# zypper
+# zypper for packages
 alias zif="zypper if"
 alias zin="sudo zypper install"
 alias zs="zypper search"
@@ -47,6 +47,13 @@ alias zrm="sudo zypper rm"
 alias zru="sudo zypper rm -u"
 alias zun="sudo zypper pa --unneeded" # list unneeded packages
 alias zdup="sudo zypper dup"
+# zypper for repositories
+alias zlr="zypper lr"
+alias zrrn="zypper renamerepo"
+alias zrrm="zypper removerepo"
+alias zrd="zypper modifyrepo -d" # disable repo
+alias zre="zypper modifyrepo -e" # enable repo
+alias zrrf="zypper modifyrepo --refresh" # refresh repo
 
 # wsl
 alias cdr="cd /mnt/e/PersonalFiles/Learning/learnRust"
