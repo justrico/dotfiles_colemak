@@ -1,9 +1,27 @@
 ## Prerequisites
 
+- ZSH
+```shell
+# Debian/Ubuntu/...
+sudo apt install zsh
+
+# openSUSE
+sudo zypper in zsh
+
+# set zsh as default shell
+chsh -s $(which zsh)
+```
+
 - [Zap](https://github.com/zap-zsh/zap) - a minimal zsh plugin manager
+```shell
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+```
 
 
 ## How to use
+
+<details>
+<summary>First time to try git bare</summary>
 
 ### Starting with git bare repo
 
@@ -35,10 +53,12 @@ dot branch -M main
 dot push github main
 ```
 
+</details>
+
 ### Install dotfiles onto a new system
 
 ```bash
-git clone --bare $HOME/dotfiles
+git clone https://github.com/justrico/dotfiles.git --bare $HOME/dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
 
@@ -67,7 +87,7 @@ After solves problems, re-run the checkout: `dot checkout`.
 
 Also set the flag `showUntrackedFiles` to `no` on this specific repository:
 ```bash
-config config --local status.showUntrackedFiles no
+dot config --local status.showUntrackedFiles no
 ```
 
 From now you can now type `dot` commands to add and update dotfiles.

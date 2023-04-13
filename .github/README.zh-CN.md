@@ -1,9 +1,27 @@
 ## 使用前准备
 
+- ZSH
+```shell
+# Debian/Ubuntu/...
+sudo apt install zsh
+
+# openSUSE
+sudo zypper in zsh
+
+# 切换zsh为默认shell
+chsh -s $(which zsh)
+```
+
 - [Zap](https://github.com/zap-zsh/zap) - 轻量 zsh 插件管理器
+```shell
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+```
 
 
 ## 用 git bare 管理 dotfiles
+
+<details>
+<summary>第一次尝试 git bare 管理自己的配置文件看这里</summary>
 
 ### 1 创建 bare repo
 
@@ -37,9 +55,9 @@ dot add .bashrc .zshrc
 dot commit -m "add bashrc zshrc"
 
 # 推送
-dot remote add github git@github.com:justrico/dotfiles.git
+dot remote add github git@gitee.com:justrico/dotfiles.git
 dot branch -M main
-dot push github main
+dot push gitee main
 ```
 
 为了防止以后拉取时导致递归拉取，需要将 bare repo 加入 `.gitignore` 文件：
@@ -49,14 +67,16 @@ dotfiles
 nvim
 ```
 
-### 3 在新环境中恢复配置
+</details>
+
+### 在新环境中恢复配置
 
 ```bash
-git clone --bare $HOME/dotfiles
+git clone https://gitee.com/justrico/dotfiles --bare $HOME/dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-dot checkout
 ```
-最后一步做完可能会报错，就像这样：
+
+此时还看不到实际的文件，需执行命令 `dot checkout` 才能看到实际管理的文件。这一步可能会报错，就像这样：
 ```error
 error: The following untracked working tree files would be overwritten by checkout:
     .bashrc
