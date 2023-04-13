@@ -1,7 +1,8 @@
 # common
 alias v="nvim"
 alias vw="nvim -O"
-alias n="neofetch"
+# alias n="neofetch"
+alias f="macchina"
 alias sshed="ssh-keygen -t ed25519 -C"
 alias tldr="tldr --color always"
 alias py="python"

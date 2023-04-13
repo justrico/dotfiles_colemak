@@ -1,5 +1,6 @@
 umask 022
 
+export PATH="$HOME/.local/share/nvim090/bin:$PATH"
 export EDITOR=nvim
 
 function pon() {
