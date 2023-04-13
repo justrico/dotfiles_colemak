@@ -185,14 +185,18 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  #typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=0
-  #typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=4
+  # typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=0
+  # typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=4
   ###### openSUSE theme ######
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#173f4f"
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND="#4bb679"
+  # typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#173f4f"
+  # typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND="#4bb679"
   # Custom icon.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
-  #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+  ###### Kali theme ######
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#ffffff"
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND="#367bf0"
+  # Custom icon.
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' ' #
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -222,20 +226,31 @@
 
   ##################################[ dir: current directory ]##################################
   ###### openSUSE theme ######
+  ## Current directory background color.
+  # typeset -g POWERLEVEL9K_DIR_BACKGROUND="#173f4f"
+  ## Default current directory foreground color.
+  # typeset -g POWERLEVEL9K_DIR_FOREGROUND="#35b9ab"
+  ## Color of the shortened directory segments.
+  # typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND="#35b9ab"
+  ## Color of the anchor directory segments. Anchor segments are never shortened. The first
+  ## segment is always an anchor.
+  # typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND="#35b9ab"
+  ###### Kali theme ######
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND="#173f4f"
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND="#cdd6f4"
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#35b9ab"
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#367bf0"
+  # Color of the shortened directory segments.
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND="#367bf0"
+  # Color of the anchor directory segments. Anchor segments are never shortened. The first
+  # segment is always an anchor.
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND="#367bf0"
+
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
-  # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND="#35b9ab"
-  # Color of the anchor directory segments. Anchor segments are never shortened. The first
-  # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND="#35b9ab"
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
