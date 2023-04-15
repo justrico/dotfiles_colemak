@@ -8,6 +8,7 @@ alias tldr="tldr --color always"
 alias py="python"
 alias pr="procs"
 # alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
+# alias bat="batcat" # Uncomment this on Ubuntu
 
 # exa
 alias ex="exa -bG --git --icons --group-directories-first"
@@ -30,31 +31,11 @@ alias gb="git branch"
 alias gk="git checkout"
 alias gr="git remote"
 
-# apt
-alias ap="apt policy"
-alias as="apt search"
-alias aud="sudo apt update"
-alias aug="sudo apt upgrade"
-alias alug="apt list --upgradable"
-# alias bat="batcat" # Uncomment this on Ubuntu
-
-# zypper for packages
-alias zif="zypper if"
-alias zin="sudo zypper install"
-alias zs="zypper search"
-alias zsi="zypper se --installed-only"
-alias zrf="sudo zypper ref"
-alias zrm="sudo zypper rm"
-alias zru="sudo zypper rm -u"
-alias zun="sudo zypper pa --unneeded" # list unneeded packages
-alias zdup="sudo zypper dup"
-# zypper for repositories
-alias zlr="zypper lr"
-alias zrrn="zypper renamerepo"
-alias zrrm="zypper removerepo"
-alias zrd="zypper modifyrepo -d" # disable repo
-alias zre="zypper modifyrepo -e" # enable repo
-alias zrrf="zypper modifyrepo --refresh" # refresh repo
-
 # wsl
 alias cdr="cd /mnt/e/PersonalFiles/Learning/learnRust"
+
+# gat
+alias at="gat -p -t catppuccin-frappe"
+function gess() {
+    gat --force-color "$@" | less -R
+}

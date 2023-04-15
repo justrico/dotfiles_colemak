@@ -20,10 +20,12 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "$ZDOTDIR/alias.zsh"
 plug "$ZDOTDIR/env.zsh"
 plug "$ZDOTDIR/vi.zsh"
-plug "$ZDOTDIR/fzf.zsh"
+# plug "$ZDOTDIR/fzf.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+plug "$ZDOTDIR/detect_distro.zsh"
 
 autopair-init
 

@@ -1,0 +1,5 @@
+alias ap="apt policy"
+alias as="apt search"
+alias aud="sudo apt update"
+alias aug="sudo apt upgrade"
+alias alug="apt list --upgradable"
