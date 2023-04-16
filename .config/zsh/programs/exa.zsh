@@ -1,0 +1,5 @@
+alias ex="exa -bG --git --icons --group-directories-first"
+alias els="exa -lbGF --git --icons --group-directories-first"
+alias ell="exa -lbF --git --icons --group-directories-first"
+alias elt="exa -lbF --git --icons --group-directories-first --tree --level=2"
+alias ela="exa -lbhHgSa@ --git --color-scale --group-directories-first --icons"
