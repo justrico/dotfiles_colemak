@@ -16,6 +16,8 @@ bindkey -M vicmd "^i" vi-change-eol
 bindkey -M vicmd "=" vi-repeat-search
 bindkey -M vicmd "h" vi-forward-word-end
 
+bindkey "^[i" autosuggest-accept  # alt+i accept zsh-autosuggetstion
+
 # Change cursor style between normal mode and cmd mode
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then

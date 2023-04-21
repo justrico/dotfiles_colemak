@@ -12,13 +12,12 @@ fi
 function detectcmd() {
     if command -v $1 > /dev/null 2>&1; then
         source $ZDOTDIR/programs/$1.zsh
-    else
-        echo "$1 is not installed"
     fi
 }
 
+detectcmd "brew"
+detectcmd "rustup"
 detectcmd "exa"
 detectcmd "git"
-detectcmd "brew"
 detectcmd "pnpm"
-detectcmd "rustup"
+detectcmd "fzf"
